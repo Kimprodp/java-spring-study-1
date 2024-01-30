@@ -5,21 +5,23 @@ import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.jupiter.api.Test;
 import springstudy.firstproject.domain.Grade;
 import springstudy.firstproject.domain.Member;
+import springstudy.firstproject.domain.Order;
 
-class MemberServiceTest {
+class OrderServiceTest {
 
     MemberService memberService = new MemberServiceImpl();
+    OrderService orderService = new OrderServiceImpl();
 
     @Test
-    void join() {
+    void createOrder() {
         //given
         Member member = new Member(1L, "Kim", Grade.VIP);
+        memberService.join(member);
 
         //when
-        memberService.join(member);
-        Member findMember = memberService.findMember(1L);
+        Order order = orderService.createOrder(member.getId(), "itemA", 10000);
 
         //then
-        assertThat(member).isEqualTo(findMember);
+        assertThat(order.getDiscountPrice()).isEqualTo(1000);
     }
 }
