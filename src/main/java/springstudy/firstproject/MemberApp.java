@@ -8,7 +8,9 @@ import springstudy.firstproject.service.MemberServiceImpl;
 public class MemberApp {
 
     public static void main(String[] args) { // PSVM
-        MemberService memberService = new MemberServiceImpl();
+        AppConfig appConfig = new AppConfig();
+        MemberService memberService = appConfig.memberService();
+//        MemberService memberService = new MemberServiceImpl();
         Member member = new Member(1L, "Kim", Grade.VIP); // 변수 자동 지정 단축키 : 컨트롤+알트+V
         memberService.join(member);
 

@@ -1,12 +1,13 @@
 package springstudy.firstproject.service;
 
+import lombok.AllArgsConstructor;
 import springstudy.firstproject.domain.Member;
 import springstudy.firstproject.repository.MemberRepository;
-import springstudy.firstproject.repository.MemoryMemberRepository;
 
+@AllArgsConstructor
 public class MemberServiceImpl implements MemberService{
 
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    private final MemberRepository memberRepository;
 
     @Override
     public void join(Member member) {
