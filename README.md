@@ -3,11 +3,11 @@
 <br>
 
 # Spec
-> Build : Gardle - Groovy
-> Language : Java 17
-> Spring Boot : 3.2.2
-> Packaging : Jar
-> Dependencies : None
+- Build : Gardle - Groovy
+- Language : Java 17
+- Spring Boot : 3.2.2
+- Packaging : Jar
+- Dependencies : None
 <br>
 
 
