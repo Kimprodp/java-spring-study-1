@@ -1,6 +1,7 @@
 package springstudy.firstproject;
 
-import springstudy.firstproject.policy.FixDiscountPolicy;
+import springstudy.firstproject.policy.DiscountPolicy;
+import springstudy.firstproject.policy.RateDiscountPolicy;
 import springstudy.firstproject.repository.MemberRepository;
 import springstudy.firstproject.repository.MemoryMemberRepository;
 import springstudy.firstproject.service.MemberService;
@@ -16,8 +17,9 @@ public class AppConfig {
         return new MemoryMemberRepository();
     }
 
-    public FixDiscountPolicy discountPolicy() {
-        return new FixDiscountPolicy();
+    public DiscountPolicy discountPolicy() {
+//        return new FixDiscountPolicy();
+        return new RateDiscountPolicy();
     }
 
     public MemberService memberService() {
