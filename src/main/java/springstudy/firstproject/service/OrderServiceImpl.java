@@ -1,15 +1,14 @@
 package springstudy.firstproject.service;
 
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import springstudy.firstproject.domain.Member;
 import springstudy.firstproject.domain.Order;
 import springstudy.firstproject.policy.DiscountPolicy;
-import springstudy.firstproject.policy.FixDiscountPolicy;
-import springstudy.firstproject.policy.RateDiscountPolicy;
 import springstudy.firstproject.repository.MemberRepository;
-import springstudy.firstproject.repository.MemoryMemberRepository;
 
 @AllArgsConstructor
+@Getter // 테스트 용도
 public class OrderServiceImpl implements OrderService{
 
     // final : 기본 or 생성자를 통해서 무조건 할당 필요
