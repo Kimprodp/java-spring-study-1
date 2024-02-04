@@ -1,8 +1,10 @@
 package springstudy.firstproject.policy;
 
+import org.springframework.stereotype.Component;
 import springstudy.firstproject.domain.Grade;
 import springstudy.firstproject.domain.Member;
 
+@Component
 public class FixDiscountPolicy implements DiscountPolicy{
 
     private int discountFixAmount = 1000; // 1,000원 할인
