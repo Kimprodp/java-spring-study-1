@@ -2,11 +2,13 @@ package springstudy.firstproject.policy;
 
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
+import springstudy.firstproject.annotation.MainDiscountPolicy;
 import springstudy.firstproject.domain.Grade;
 import springstudy.firstproject.domain.Member;
 
 @Component
-@Primary
+//@Primary
+@MainDiscountPolicy
 public class RateDiscountPolicy implements DiscountPolicy{
 
     private int discountPercent = 10;
